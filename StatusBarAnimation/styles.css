@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #c4c4c4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.status-bar {
+  display: flex;
+  align-items: center;
+  font-size: 1.15rem;
+  font-family: "Roboto", sans-serif;
+  color: #292929;
+  background-color: #f9fafb;
+  border-radius: 10rem;
+  width: 20rem;
+  max-width: 34rem;
+  height: 1rem;
+  padding: 0.88rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.status-bar:hover {
+  transform: scale(1.05);
+  border: 1px solid #a1a1a1;
+}
+
+.status-message {
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  animation: text-scroll-animation 5s linear infinite;
+}
+
+.status-message span {
+  margin-left: 0.5rem;
+  margin-right: 16rem;
+}
+
+.status-icon {
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  background-color: #4ade80;
+}
+
+@keyframes text-scroll-animation {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
